@@ -23,7 +23,6 @@ const Button = styled.button``;
 
 
 const Notes = ({ match: { params: { id } }}) =>
-<>
   <Query query={GET_NOTE} variables={{id}}>
     {
       ({data}) => 
@@ -42,6 +41,5 @@ const Notes = ({ match: { params: { id } }}) =>
         ) : null
     }
   </Query>
-</>
 
 export default Notes;

@@ -53,16 +53,16 @@ const Notes = () => (
       <Subtitle>Talking notes while we learn.</Subtitle>
     </Header>
     <Middle>
-      <Query query={GET_NOTES}>
-        {({ data }) => 
-          data.notes
-            && data.notes.map(note => (
-                <Link to={`/note/${note.id}`} key={note.id}>
-                  <Note>{note.title}</Note>
-                </Link>
-              ))
-        }
-      </Query>
+        <Query query={GET_NOTES}>
+          {({ data }) => 
+            data.notes
+              && data.notes.map(note => (
+                  <Link to={`/note/${note.id}`} key={note.id}>
+                    <Note>{note.title}</Note>
+                  </Link>
+                ))
+          }
+        </Query>
     </Middle>
   </>
 )

@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app';
 import { ApolloProvider } from "react-apollo";
+import { ApolloProvider as ApolloHooksProvider } from 'react-apollo-hooks';
 import client from "./apollo";
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <App />
+    <ApolloHooksProvider client={client}>
+      <App />
+    </ApolloHooksProvider>
   </ApolloProvider>,
   document.getElementById('root')
 );
