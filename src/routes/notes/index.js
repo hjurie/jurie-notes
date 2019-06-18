@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { GET_NOTES } from '../../queries';
 
-
-
 const Header = styled.header`
   position: relative;
   padding: 20px;
@@ -34,12 +32,6 @@ const Note = styled.div`
   &:hover {
     background-color: #eee;
   }
-`;
-
-const NoteTitle = styled.span`
-  padding-bottom: 5px;
-  font-weight: 600;
-  font-size: 20px;
 `;
 
 
